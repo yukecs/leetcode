@@ -1,0 +1,3 @@
+export {dataURLtoBlob} from './transform'
+
+

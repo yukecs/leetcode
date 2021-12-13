@@ -12,7 +12,10 @@ function getHtml(url){
 
 export function test(){
     (async()=>{
-        const text = await getHtml('http://www.shuquge.com/txt/108449')
+        const text = await getHtml('https://huaban.com/boards/15197806/')
         console.log(text)
+        const reg:RegExp|String = "\\{\"pin_id\":(\\d+),.+?\"key\":\"(.+?)\",.\"type\":\"image/(.+?)\","
+        let matches = text.match(reg)
+        console.log(matches)
     })()
 }
