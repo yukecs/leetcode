@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "scripts": {
+    "ts": "node --loader ts-node/esm ./src/main.ts",
+    "start": "tsnd -P ./tsconfig.json --respawn ./src/main.ts"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cheerio": "^1.0.0-rc.10"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.12",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.3"
+  }
+}

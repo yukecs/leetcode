@@ -1,0 +1,10 @@
+node_modules
+.DS_Store
+# dist
+# dist
+dist-ssr
+*.local
+server/node_modules
+yukecs
+yukecs.pub
+ 
