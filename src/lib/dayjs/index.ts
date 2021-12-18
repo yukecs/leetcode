@@ -8,6 +8,10 @@ import dayjs,{ConfigType} from "dayjs";
 export function YYYYMMDD(date?:ConfigType) {
     return dayjs(date).format("YYYY-MM-DD");
 }
+
+export function YYYYMMDDHHmmss(date?:ConfigType) {
+    return dayjs(date).format("YYYY-MM-DD HH:mm:ss");
+}
 /**
  * 获取两个日期之间相差的天数
  * @param prevDate 当前的日期
@@ -17,3 +21,5 @@ export function YYYYMMDD(date?:ConfigType) {
 export function getDaysBetween(prevDate:ConfigType,date:ConfigType){
     return (dayjs(prevDate).diff(date,'day'))
 }
+
+// console.log(YYYYMMDDHHmmss(new Date()))

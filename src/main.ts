@@ -1,3 +1,3 @@
-import {test} from './utils'
-test()
-console.log(123)
+// import  './getBoard'
+import './getZK'
+// import './lib/dayjs'
