@@ -1,2 +1,2 @@
-export {YYYYMMDD,getDaysBetween} from '@/lib/dayjs'
+export {YYYYMMDD,getDaysBetween,isDateBefore} from '@/lib/dayjs'
 

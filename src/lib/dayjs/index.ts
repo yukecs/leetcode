@@ -22,4 +22,16 @@ export function getDaysBetween(prevDate:ConfigType,date:ConfigType){
     return (dayjs(prevDate).diff(date,'day'))
 }
 
-// console.log(YYYYMMDDHHmmss(new Date()))
+/**
+ * 比较两个日期的大小，若Date1大，返回false
+ * @param Date1 
+ * @param Date2 
+ * @returns 
+ */
+export function isDateBefore(Date1:ConfigType,Date2:ConfigType){
+    return dayjs(Date1).isBefore(dayjs(Date2))
+}
+
+// console.log(YYYYMMDDHHmmss(new Date()))/
+// console.log(isDateBefore('2021-11-30 15:42:06','2021-2-1'))
+// console.log(new Date('2021-11-30 15:42:06'))
