@@ -1,0 +1,9 @@
+.my-v-loading-bg{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3090;
+    /* background: rgba(54,54,54,0.9); */
+}

@@ -28,8 +28,9 @@ export function getOffsetOfEl(mouseEv, ElName) {
         for(let i = 1; i<path.length; i++){
             if(path[i][type] === name){
                 let el = path[i]
-                res.offsetX = clientX - el.clientLeft
-                res.offsetY = clientY - el.clientTop
+                let domRect = el.getBoundingClientRect()
+                res.offsetX = clientX - domRect.left
+                res.offsetY = clientY - domRect.top
             }
         }
     }

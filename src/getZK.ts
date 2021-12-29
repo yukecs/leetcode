@@ -186,9 +186,9 @@ export async function getWorks(url:string){
 //     const res = await getWorks('https://www.zcool.com.cn/work/ZNDczNDgwNTI=.html')
 // })()
 
-(async()=>{
-    const res = await getNewZK('https://lingdongps.zcool.com.cn/',new Date('2021-11-31'))
-    console.log(res)
-})()
+// (async()=>{
+//     const res = await getNewZK('https://lingdongps.zcool.com.cn/',new Date('2021-11-31'))
+//     console.log(res)
+// })()
 
 // getNewZK

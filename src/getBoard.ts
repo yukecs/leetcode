@@ -71,9 +71,9 @@ async function getBoard(url: string):Promise<Broad> {
 
 
 
-(async()=>{
-    const res =await getBoard('https://huaban.com/boards/931234')
-    console.log(res)
-})()
+// (async()=>{
+//     const res =await getBoard('https://huaban.com/boards/931234')
+//     console.log(res)
+// })()
 
 
