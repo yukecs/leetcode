@@ -10,9 +10,11 @@ const loadingDirective = {
       append(el)
     }
 
+    // el.style.position = 'relative';
   },
   updated(el, binding) {
     // console.log(binding.value)
+    // console.log(el.style.position)
     if (binding.value !== binding.oldValue) {
       binding.value ? append(el) : remove(el)
     }
@@ -24,6 +26,9 @@ const append = (el) => {
   div.classList.add("my-v-loading-bg");
   el.appendChild(div)
   el.$div = div
+  if(el.style.position == "" || el.style.position =="static"){
+    el.style.position = "relative"
+  }
   el.style.pointerEvents = 'none';
   let loadingInstance = createApp(Loading, {
     width: Math.min(el.clientWidth, el.clientHeight),
