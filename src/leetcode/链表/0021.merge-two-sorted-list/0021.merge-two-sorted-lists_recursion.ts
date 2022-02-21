@@ -6,7 +6,7 @@
 //         this.next = (next === undefined ? null : next)
 //     }
 // }
-import {ListNode} from '../type'
+import {ListNode} from '../../type'
 
 /**递归 参考答案 */
 export function mergeTwoLists(l1: ListNode | null, l2: ListNode | null): ListNode | null {
