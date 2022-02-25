@@ -28,3 +28,5 @@ export const main =()=>{
     let testArray = [1,1,1,2,3,5,6,6,8]
     console.log(singleLinkedListToArray(createSingleLinkedList(testArray)))
 }
+
+main()
