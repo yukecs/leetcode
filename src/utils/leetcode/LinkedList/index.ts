@@ -1,4 +1,5 @@
 import {ListNode} from '../type'
+import {deleteDuplicates as test_0082} from '../../../leetcode/链表/0082.remove-duplicates-from-sorted-list-ii/0082.remove-duplicates-from-sorted-list-ii_iterate'
 /**
  * 通过数组创建单链表
  */
@@ -6,10 +7,10 @@ export function createSingleLinkedList(vals:number[]):ListNode{
     let head = new ListNode(-1)
     let prehead = head
     vals.forEach((val,i)=>{
-        prehead.val = val
+        prehead.next = new ListNode(val)
         prehead = prehead.next
     })
-    return head
+    return head.next
 }
 
 /**
@@ -25,9 +26,15 @@ export function singleLinkedListToArray(l1:ListNode):number[]{
 }
 
 export const main =()=>{
-
-    let testArray = [1,1,1,2,3,5,6,6,8]
-    console.log(singleLinkedListToArray(createSingleLinkedList(testArray)))
+    let testArray = [1,2,3,3,4,4,5]
+    let l1 = createSingleLinkedList(testArray)
+    test_0082(l1)
 }
 
-main()
+/** 测试  */
+function test(){
+    let testArray = [1,1,1,2,3,5,6,6,8]
+    let l1 = createSingleLinkedList(testArray)
+    console.log(l1)
+    console.log(singleLinkedListToArray(l1))
+}

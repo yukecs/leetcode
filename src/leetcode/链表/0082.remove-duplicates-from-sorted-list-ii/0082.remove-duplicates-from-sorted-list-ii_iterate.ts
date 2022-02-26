@@ -12,38 +12,30 @@
 
 import {ListNode} from '../../type'
 
-/**迭代 */
+/**迭代 first success*/
 export function deleteDuplicates(head: ListNode | null): ListNode | null {
     var prehead = head
     var set = new Set<number>()
-    var prev = new ListNode(-1)
+    var deleteSet = new Set<number>()
+    var l1 = new ListNode(-101,head)
     while(prehead!==null){
-        /**将所有需要删除的元素放到set */
+        /**将所有需要删除的元素放到deleteSet */
+        if(set.has(prehead.val)){
+            deleteSet.add(prehead.val)
+        }
         set.add(prehead.val)
         prehead = prehead.next
     }
-    prehead = head
-    while(prehead!==null){
-        
-        if(set.has(prehead.val)){ /**删除需要删除的元素 */
-            if(prev=== null){
-                /**删除链头 */
-                prehead = prehead.next
-                head = prehead
-            }else if(prev && prehead.next ){
-                /**删除链中 */
-                prev.next = prehead.next
-                prehead = prehead.next
-            }else{
-                /**删除链尾 */
-                prehead =new ListNode(-1)
-            }
-        }else{ /**无需删除 */
-            prev = prehead
+    prehead = l1
+    while(prehead.next){
+        if(deleteSet.has(prehead.next.val)){
+            prehead.next = prehead.next.next
+        }else{
             prehead = prehead.next
         }
     }
-    return head
+
+    return l1.next
 };
 
 
