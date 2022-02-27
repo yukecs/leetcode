@@ -13,5 +13,5 @@
  import {ListNode} from '../../type'
 
  export function deleteDuplicates(head: ListNode | null): ListNode | null {
-    
+    return new ListNode(-1)
  };
