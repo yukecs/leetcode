@@ -1,5 +1,5 @@
-题目地址(82. 合并两个有序链表)
-https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/
+### 题目地址(82. 合并两个有序链表)
+`https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/`
 
 题目描述
 
@@ -9,33 +9,33 @@ https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/
 示例 1：
 
 输入：head = [1,2,3,3,4,4,5]
+
 输出：[1,2,5]
 
 示例 2：
 
 输入：head = [1,1,1,2,3]
+
 输出：[2,3]
  
 
 提示：
 
-链表中节点数目在范围 [0, 300] 内
--100 <= Node.val <= 100
-题目数据保证链表已经按升序 排列
+- 链表中节点数目在范围 [0, 300] 内
+- -100 <= Node.val <= 100
+- 题目数据保证链表已经按升序 排列
 
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
+```ts
+//  * Definition for singly-linked list.
+//  * class ListNode {
+//  *     val: number
+//  *     next: ListNode | null
+//  *     constructor(val?: number, next?: ListNode | null) {
+//  *         this.val = (val===undefined ? 0 : val)
+//  *         this.next = (next===undefined ? null : next)
+//  *     }
+//  * }
 
-```js
 function deleteDuplicates(head: ListNode | null): ListNode | null {
 
 };
