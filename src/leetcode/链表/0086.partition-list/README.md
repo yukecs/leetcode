@@ -1,4 +1,4 @@
-### 题目地址(83.  删除排序链表中的重复元素)
+### 题目地址(86. 分隔链表)
 `https://leetcode-cn.com/problems/partition-list/`
 
 ### 题目描述

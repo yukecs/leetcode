@@ -1,4 +1,4 @@
-### 题目地址(82. 合并两个有序链表)
+### 题目地址(82. 删除排序链表中的重复元素)
 `https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/`
 
 题目描述
