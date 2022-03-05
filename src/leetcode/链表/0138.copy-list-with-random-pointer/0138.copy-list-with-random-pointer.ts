@@ -10,7 +10,7 @@
  * }
  */
 
- import { ListNode } from '../../type'
+ import { Node } from './type'
 
  function copyRandomList(head: Node | null): Node | null {
     

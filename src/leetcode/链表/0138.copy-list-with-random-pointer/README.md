@@ -49,13 +49,15 @@ random_index：随机指针指向的节点索引（范围从 0 到 n-1）；�
 
 ```ts
 /**
- * Definition for singly-linked list.
- * class ListNode {
+ * Definition for Node.
+ * class Node {
  *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
+ *     next: Node | null
+ *     random: Node | null
+ *     constructor(val?: number, next?: Node, random?: Node) {
  *         this.val = (val===undefined ? 0 : val)
  *         this.next = (next===undefined ? null : next)
+ *         this.random = (random===undefined ? null : random)
  *     }
  * }
  */
