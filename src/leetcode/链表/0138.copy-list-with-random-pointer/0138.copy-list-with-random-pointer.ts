@@ -12,7 +12,7 @@
  * }
  */
 
- import { Node } from './type'
+import { Node } from './type'
 
 export function copyRandomList(l1: Node | null): Node | null {
     if(!l1) return l1;
@@ -21,8 +21,22 @@ export function copyRandomList(l1: Node | null): Node | null {
     var l2:Node | null =new Node(l1.val)
     nodeMap.set(l1,l2)
     var prehead2 = l2
-
-    while(prehead1){
-
+    while(prehead1.next){
+        if(nodeMap.has(prehead1.next)){
+            prehead2.next = nodeMap.get(prehead1.next)
+        }else{
+            prehead2.next = new Node(prehead1.next.val)
+            nodeMap.set(prehead1.next,prehead2.next)
+        }
+        if(prehead1.random){
+            if(nodeMap.has(prehead1.random)){
+                prehead2.random = nodeMap.get(prehead1.random)
+            }else{
+                prehead2.random = new Node(prehead1.random.val)
+                nodeMap.set(prehead1.random,prehead2.random)
+            }
+        }
+        prehead1 = prehead1.next
     }
+    return l2 
 };
