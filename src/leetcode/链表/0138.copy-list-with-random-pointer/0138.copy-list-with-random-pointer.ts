@@ -1,17 +1,28 @@
 /**
- * Definition for singly-linked list.
- * class ListNode {
+ * Definition for Node.
+ * class Node {
  *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
+ *     next: Node | null
+ *     random: Node | null
+ *     constructor(val?: number, next?: Node, random?: Node) {
  *         this.val = (val===undefined ? 0 : val)
  *         this.next = (next===undefined ? null : next)
+ *         this.random = (random===undefined ? null : random)
  *     }
  * }
  */
 
  import { Node } from './type'
 
- function copyRandomList(head: Node | null): Node | null {
-    
+export function copyRandomList(l1: Node | null): Node | null {
+    if(!l1) return l1;
+    var nodeMap = new Map<Node,Node>()
+    var prehead1 = l1
+    var l2:Node | null =new Node(l1.val)
+    nodeMap.set(l1,l2)
+    var prehead2 = l2
+
+    while(prehead1){
+
+    }
 };
