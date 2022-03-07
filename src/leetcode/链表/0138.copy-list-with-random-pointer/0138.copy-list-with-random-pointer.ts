@@ -14,6 +14,8 @@
 
 import { Node } from './type'
 
+/**迭代 first success */
+
 export function copyRandomList(l1: Node | null): Node | null {
     if(!l1) return l1;
     var nodeMap = new Map<Node,Node>()
@@ -21,12 +23,14 @@ export function copyRandomList(l1: Node | null): Node | null {
     var l2:Node | null =new Node(l1.val)
     nodeMap.set(l1,l2)
     var prehead2 = l2
-    while(prehead1.next){
-        if(nodeMap.has(prehead1.next)){
-            prehead2.next = nodeMap.get(prehead1.next)
-        }else{
-            prehead2.next = new Node(prehead1.next.val)
-            nodeMap.set(prehead1.next,prehead2.next)
+    while(prehead1){
+        if(prehead1.next){
+            if(nodeMap.has(prehead1.next)){
+                prehead2.next = nodeMap.get(prehead1.next)
+            }else{
+                prehead2.next = new Node(prehead1.next.val)
+                nodeMap.set(prehead1.next,prehead2.next)
+            }
         }
         if(prehead1.random){
             if(nodeMap.has(prehead1.random)){
@@ -37,6 +41,7 @@ export function copyRandomList(l1: Node | null): Node | null {
             }
         }
         prehead1 = prehead1.next
+        prehead2 = prehead2.next
     }
     return l2 
 };
