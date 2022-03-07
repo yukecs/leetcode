@@ -15,7 +15,6 @@
 import { Node } from './type'
 
 /**迭代 first success */
-
 export function copyRandomList(l1: Node | null): Node | null {
     if(!l1) return l1;
     var nodeMap = new Map<Node,Node>()
