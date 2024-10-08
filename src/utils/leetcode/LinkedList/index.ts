@@ -1,5 +1,5 @@
 import {ListNode} from '../type'
-import {deleteDuplicates as deleteDuplicates_0082} from '../../../leetcode/链表/0082.remove-duplicates-from-sorted-list-ii/0082.remove-duplicates-from-sorted-list-ii_iterate'
+import {deleteDuplicates as deleteDuplicates_0082} from '../../../leetcode/链表/0082.删除排序链表中的重复元素/0082.remove-duplicates-from-sorted-list-ii_iterate'
 /**
  * 通过数组创建单链表
  */
