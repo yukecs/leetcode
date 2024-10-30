@@ -1,7 +1,6 @@
 {
   "type": "module",
   "scripts": {
-    "ts": "node --loader ts-node/esm ./src/main.ts",
     "start": "tsnd -P ./tsconfig.json --respawn ./src/main.ts"
   },
   "dependencies": {

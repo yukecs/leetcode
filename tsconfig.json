@@ -10,7 +10,7 @@
     "paths": {
       "@/*":["src/*"],
     },
-    "sourceMap": true
+    "sourceMap": true,
   },
   "include": ["src/**/*.ts","src/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue","src/*.vue","src/**/*","components.d.ts","auto-imports.d.ts"]
 }
